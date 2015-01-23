@@ -11,17 +11,24 @@
 </head>
 <body>
 
-	<div class="img-div">
-		<img class="poster" src="img/tourposter.jpg" alt="">
+	<div class="poster-div">
+		<img id="poster" class="poster undraggable" src="img/tourposter.jpg" alt="">
+		<div class="button">
+			<div class="button-center">
+				<a target="_blank" href="http://google.com/">
+					<img id="tickets" src="img/button.png" alt="" class="button-img">
+				</a>
+			</div>
+		</div>
 	</div>
-	<div class="button">
-		<a target="_blank" href="http://google.com/">
-			<img src="img/button.png" alt="" class="button-img">
-		</a>
-	</div>
+
 	<div class="boxMusic">
-    	<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/47479282&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+    	<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/47479282&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true&amp;start_track=1"></iframe>
 	</div>
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>	
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+	document.getElementById('poster').ondragstart = function() { return false; };
+	document.getElementById('tickets').ondragstart = function() { return false; };
+</script>
 </html>
